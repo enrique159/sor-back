@@ -11,6 +11,9 @@
       "@app/*": ["src/app/*"],
       "@shared/*": ["src/app/shared/*"],
     },
+    "plugins": [
+      { "transform": "typescript-transform-paths" }
+    ],
   },
   "include": ["src/**/*"],
 }

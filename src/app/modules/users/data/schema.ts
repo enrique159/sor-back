@@ -31,7 +31,9 @@ UserSchema.pre('save', function(next) {
 
 // This is a mongoose middleware that will be executed before the user is updated
 UserSchema.pre('updateOne', function(next) {
+  // @ts-ignore
   if (!this._update.$set.password) next()
+  // @ts-ignore
   this._update.$set.password = encryptPassword(this._update.$set.password)
   next()
 })
