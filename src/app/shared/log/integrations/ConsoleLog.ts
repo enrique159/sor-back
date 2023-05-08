@@ -1,4 +1,4 @@
-import { IRequest } from '../interfaces/IRequest.js'
+import { IRequest } from '../interfaces/IRequest'
 
 export default class ConsoleLog {
   private info: IRequest

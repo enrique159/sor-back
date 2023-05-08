@@ -1,8 +1,8 @@
 import { Model } from 'mongoose'
-import { IDBConnectionManager } from '@shared/database/interfaces/IDBConnectionManager.js'
-import IFindOneBaseRepository from '@shared/common/repository/interfaces/IFindOneBaseRepository.js'
-import { MongooseConnectionStatus } from '@shared/database/interfaces/MongooseStatus.js'
-import { DatabaseTypes } from '@shared/database/interfaces/DatabaseTypes.js'
+import { IDBConnectionManager } from '@shared/database/interfaces/IDBConnectionManager'
+import IFindOneBaseRepository from '@shared/common/repository/interfaces/IFindOneBaseRepository'
+import { MongooseConnectionStatus } from '@shared/database/interfaces/MongooseStatus'
+import { DatabaseTypes } from '@shared/database/interfaces/DatabaseTypes'
 
 export default class FindOneBaseRepository<T, U> implements IFindOneBaseRepository<T, U> {
   protected DBConnectionManager: IDBConnectionManager

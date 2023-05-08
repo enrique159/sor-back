@@ -1,10 +1,10 @@
-import ICreateOneBaseRepository from '@shared/common/repository/interfaces/ICreateOneBaseRepository.js'
-import { MongooseConnectionStatus } from '@shared/database/interfaces/MongooseStatus.js'
+import ICreateOneBaseRepository from '@shared/common/repository/interfaces/ICreateOneBaseRepository'
+import { MongooseConnectionStatus } from '@shared/database/interfaces/MongooseStatus'
 
 import { Model } from 'mongoose'
-import DBConnectionManager from '@shared/database/services/DBConnectionManager.js'
-import { IDBConnectionManager } from '@shared/database/interfaces/IDBConnectionManager.js'
-import { DatabaseTypes } from '@shared/database/interfaces/DatabaseTypes.js'
+import DBConnectionManager from '@shared/database/services/DBConnectionManager'
+import { IDBConnectionManager } from '@shared/database/interfaces/IDBConnectionManager'
+import { DatabaseTypes } from '@shared/database/interfaces/DatabaseTypes'
 
 export default class CreateOneBaseRepository<T> implements ICreateOneBaseRepository<T> {
   protected DBConnectionManager: DBConnectionManager

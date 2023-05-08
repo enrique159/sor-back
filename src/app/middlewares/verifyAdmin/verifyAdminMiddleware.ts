@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from 'express'
 import jwt from 'jsonwebtoken'
-import HttpStatusCode from '@shared/enums/httpStatusCode.js'
-import { logger } from '@shared/log/logger.js'
-import ErrorCode from '@shared/error/errorCode.js'
+import HttpStatusCode from '@shared/enums/httpStatusCode'
+import { logger } from '@shared/log/logger'
+import ErrorCode from '@shared/error/errorCode'
 
 export default class VerifyAdminMiddleware {
   async execute(req: Request, res: Response, next: NextFunction) {

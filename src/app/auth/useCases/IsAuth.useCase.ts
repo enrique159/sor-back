@@ -1,11 +1,11 @@
-import { BaseUseCase } from '@shared/common/BaseUseCase.js'
-import DBConnectionManager from '@shared/database/services/DBConnectionManager.js'
-import HttpStatusCode from '@shared/enums/httpStatusCode.js'
-import Exception from '@shared/error/Exception.js'
-import ErrorCode from '@shared/error/errorCode.js'
-import { UserAuth } from '../domain/interfaces/Auth.js'
-import { QueryParams } from '../domain/services/IsAuthRepositoryModel.js'
-import { IsAuthRepository } from '../repository/IsAuthRepository.js'
+import { BaseUseCase } from '@shared/common/BaseUseCase'
+import DBConnectionManager from '@shared/database/services/DBConnectionManager'
+import HttpStatusCode from '@shared/enums/httpStatusCode'
+import Exception from '@shared/error/Exception'
+import ErrorCode from '@shared/error/errorCode'
+import { UserAuth } from '../domain/interfaces/Auth'
+import { QueryParams } from '../domain/services/IsAuthRepositoryModel'
+import { IsAuthRepository } from '../repository/IsAuthRepository'
 
 export default class IsAuthUseCase implements BaseUseCase<string, Promise<UserAuth>> {
   async execute(params?: string): Promise<UserAuth> {

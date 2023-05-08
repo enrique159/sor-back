@@ -1,6 +1,6 @@
-import { IRequest } from './interfaces/IRequest.js'
-import { dateTimeZoneFormat } from '@/utils/dateTimeZoneFormat.js'
-import ConsoleLog from './integrations/ConsoleLog.js'
+import { IRequest } from './interfaces/IRequest'
+import { dateTimeZoneFormat } from '@/utils/dateTimeZoneFormat'
+import ConsoleLog from './integrations/ConsoleLog'
 
 export const logger = (info: IRequest) => {
   const { date, time } = getDateNow()

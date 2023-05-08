@@ -1,4 +1,4 @@
-import type { Users, User } from '../interfaces/index.js'
+import type { Users, User } from '../interfaces/index'
 
 export interface UsersRepositoryModel {
   getUsers(): Promise<Users>;

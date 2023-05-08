@@ -1,8 +1,8 @@
 import express from 'express'
-import VerifyAuthMiddleware from '../middlewares/verifyAuth/verifyAuthMiddleware.js'
-import SignInController from './controller/SignInController.js'
-import SignOutController from './controller/SignOutController.js'
-import IsAuthController from './controller/IsAuthController.js'
+import VerifyAuthMiddleware from '../middlewares/verifyAuth/verifyAuthMiddleware'
+import SignInController from './controller/SignInController'
+import SignOutController from './controller/SignOutController'
+import IsAuthController from './controller/IsAuthController'
 
 export const AuthRoutes = () => {
   const router = express.Router()

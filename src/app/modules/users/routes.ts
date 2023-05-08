@@ -1,6 +1,6 @@
 import express from 'express'
-import VerifyAuthMiddleware from '../../middlewares/verifyAuth/verifyAuthMiddleware.js'
-import CreateUserController from './controllers/CreateUserController.js'
+import VerifyAuthMiddleware from '../../middlewares/verifyAuth/verifyAuthMiddleware'
+import CreateUserController from './controllers/CreateUserController'
 
 export const UserRoutes = () => {
   const router = express.Router()

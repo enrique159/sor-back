@@ -1,10 +1,10 @@
-import { UserModel } from '@app/modules/users/data/model.js'
-import { User } from '@app/modules/users/domain/interfaces/Users.js'
-import { FindOneBaseRepository } from '@shared/common/repository/index.js'
-import HttpStatusCode from '@shared/enums/httpStatusCode.js'
-import Exception from '@shared/error/Exception.js'
-import ErrorCode from '@shared/error/errorCode.js'
-import { IsAuthRepositoryModel, QueryParams } from '../domain/services/IsAuthRepositoryModel.js'
+import { UserModel } from '@app/modules/users/data/model'
+import { User } from '@app/modules/users/domain/interfaces/Users'
+import { FindOneBaseRepository } from '@shared/common/repository/index'
+import HttpStatusCode from '@shared/enums/httpStatusCode'
+import Exception from '@shared/error/Exception'
+import ErrorCode from '@shared/error/errorCode'
+import { IsAuthRepositoryModel, QueryParams } from '../domain/services/IsAuthRepositoryModel'
 
 export class IsAuthRepository extends FindOneBaseRepository<QueryParams, User> implements IsAuthRepositoryModel {
   async execute(item: QueryParams): Promise<User> {

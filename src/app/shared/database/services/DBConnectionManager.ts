@@ -1,8 +1,8 @@
-import { IDBConnectionManager } from '../interfaces/IDBConnectionManager.js'
-import MongooseManager from '../integrations/MongooseManager.js'
+import { IDBConnectionManager } from '../interfaces/IDBConnectionManager'
+import MongooseManager from '../integrations/MongooseManager'
 
 // Types
-import { DatabaseTypes } from '../interfaces/DatabaseTypes.js'
+import { DatabaseTypes } from '../interfaces/DatabaseTypes'
 
 export default class DBConnectionManager implements IDBConnectionManager {
   private static instance: DBConnectionManager

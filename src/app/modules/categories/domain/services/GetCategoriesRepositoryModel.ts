@@ -1,4 +1,4 @@
-import { Categories, Category } from "../interfaces/index.js";
+import { Category } from '../interfaces/index'
 
 export interface GetCategoriesRepositoryModel {
   execute(): Promise<Category[]>;

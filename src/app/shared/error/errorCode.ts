@@ -1,5 +1,5 @@
-import ErrorCategory from '../enums/errorCategory.js'
-import { ErrorType } from './BaseError.js'
+import ErrorCategory from '../enums/errorCategory'
+import { ErrorType } from './BaseError'
 
 const ErrorCode: { [key: string]: ErrorType } = {
   ERR0000: {

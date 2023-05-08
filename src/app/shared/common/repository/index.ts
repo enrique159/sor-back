@@ -1,12 +1,12 @@
 // BASES
-import CreateOneBaseRepository from './bases/CreateOneBaseRepository.js'
-import FindOneBaseRepository from './bases/FindOneBaseRepository.js'
-import FindBaseRepository from './bases/FindBaseRepository.js'
+import CreateOneBaseRepository from './bases/CreateOneBaseRepository'
+import FindOneBaseRepository from './bases/FindOneBaseRepository'
+import FindBaseRepository from './bases/FindBaseRepository'
 
 // INTERFACES
-import ICreateOneBaseRepository from './interfaces/ICreateOneBaseRepository.js'
-import IFindOneBaseRepository from './interfaces/IFindOneBaseRepository.js'
-import IFindBaseRepository from './interfaces/IFindBaseRepository.js'
+import ICreateOneBaseRepository from './interfaces/ICreateOneBaseRepository'
+import IFindOneBaseRepository from './interfaces/IFindOneBaseRepository'
+import IFindBaseRepository from './interfaces/IFindBaseRepository'
 
 export {
   CreateOneBaseRepository,

@@ -1,15 +1,14 @@
-import { FindBaseRepository } from "../../../shared/common/repository/index.js";
-import MongoDBErrorCodes from "../../../shared/enums/MongoDBErrorCodes.js";
-import HttpStatusCode from "../../../shared/enums/httpStatusCode.js";
-import Exception from "../../../shared/error/Exception.js";
-import ErrorCode from "../../../shared/error/errorCode.js";
-import { CategoryModel } from "../data/model.js";
-import { Category } from "../domain/interfaces/Categories.js";
-import { GetCategoriesRepositoryModel } from "../domain/services/GetCategoriesRepositoryModel.js";
+import { FindBaseRepository } from '@shared/common/repository/index'
+import HttpStatusCode from '@shared/enums/httpStatusCode'
+import Exception from '@shared/error/Exception'
+import ErrorCode from '@shared/error/errorCode'
+import { CategoryModel } from '../data/model'
+import { Category } from '../domain/interfaces/Categories'
+import { GetCategoriesRepositoryModel } from '../domain/services/GetCategoriesRepositoryModel'
 
 export class GetCategoriesRepository extends FindBaseRepository<Category> implements GetCategoriesRepositoryModel {
   async execute(): Promise<Category[]> {
-    const model = CategoryModel();
+    const model = CategoryModel()
     try {
       return await super.execute(model)
     } catch (error) {

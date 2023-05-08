@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
-import { decodeToken } from '@/plugins/jwt/decodeToken.js'
-import IsAuthUseCase from '../useCases/IsAuth.useCase.js'
-import { logger } from '@shared/log/logger.js'
+import { decodeToken } from '@/plugins/jwt/decodeToken'
+import IsAuthUseCase from '../useCases/IsAuth.useCase'
+import { logger } from '@shared/log/logger'
 
 export default class IsAuthController {
   async execute(req: Request, res: Response) {

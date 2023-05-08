@@ -3,11 +3,11 @@ import dotenv from 'dotenv'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
 // DEPENDENCIES
-import DBConnectionManager from '@shared/database/services/DBConnectionManager.js'
+import DBConnectionManager from '@shared/database/services/DBConnectionManager'
 // ROUTES IMPORT
-import { Routes } from '@/routes/index.js'
+import { Routes } from '@/routes/index'
 // TYPES
-import { MongooseConnectionStatus } from '@/types/Mongoose.type.js'
+import { MongooseConnectionStatus } from '@/types/Mongoose.type'
 
 // SERVER
 dotenv.config()

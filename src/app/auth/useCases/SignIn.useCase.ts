@@ -1,12 +1,12 @@
-import { comparePassword } from '@/utils/comparePasswords.js'
-import { BaseUseCase } from '@shared/common/BaseUseCase.js'
-import DBConnectionManager from '@shared/database/services/DBConnectionManager.js'
-import Exception from '@shared/error/Exception.js'
-import { Auth, AuthResponse, QueryParams, UserAuth } from '../domain/interfaces/Auth.js'
-import { SignInRepository } from '../repository/SignInRepository.js'
-import { generateToken } from '@/plugins/jwt/generateToken.js'
-import ErrorCode from '@shared/error/errorCode.js'
-import HttpStatusCode from '@shared/enums/httpStatusCode.js'
+import { comparePassword } from '@/utils/comparePasswords'
+import { BaseUseCase } from '@shared/common/BaseUseCase'
+import DBConnectionManager from '@shared/database/services/DBConnectionManager'
+import Exception from '@shared/error/Exception'
+import { Auth, AuthResponse, QueryParams, UserAuth } from '../domain/interfaces/Auth'
+import { SignInRepository } from '../repository/SignInRepository'
+import { generateToken } from '@/plugins/jwt/generateToken'
+import ErrorCode from '@shared/error/errorCode'
+import HttpStatusCode from '@shared/enums/httpStatusCode'
 
 export default class SignInUseCase implements BaseUseCase<Auth, Promise<AuthResponse>> {
   async execute(payload: Auth): Promise<AuthResponse> {

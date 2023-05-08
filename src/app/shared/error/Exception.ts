@@ -1,5 +1,5 @@
-import HttpStatusCode from '../enums/httpStatusCode.js'
-import { BaseError, ErrorType } from './BaseError.js'
+import HttpStatusCode from '../enums/httpStatusCode'
+import { BaseError, ErrorType } from './BaseError'
 
 export default class Exception extends BaseError {
   readonly statusCode: HttpStatusCode

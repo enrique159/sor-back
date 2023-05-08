@@ -1,7 +1,7 @@
 import express from 'express'
-import VerifyAuthMiddleware from '@app/middlewares/verifyAuth/verifyAuthMiddleware.js'
-import CreateCategorieController from './controllers/CreateCategorieController.js'
-import GetCategoriesController from './controllers/GetCategoriesController.js'
+import VerifyAuthMiddleware from '@app/middlewares/verifyAuth/verifyAuthMiddleware'
+import CreateCategorieController from './controllers/CreateCategorieController'
+import GetCategoriesController from './controllers/GetCategoriesController'
 
 export const CategoriesRoutes = () => {
   const router = express.Router()

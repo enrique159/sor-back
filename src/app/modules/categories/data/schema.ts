@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { Category } from "../domain/interfaces/index.js";
+import mongoose from 'mongoose'
+import { Category } from '../domain/interfaces/index'
 
 export const CategorySchema = new mongoose.Schema<Category>({
   name: {
@@ -13,11 +13,11 @@ export const CategorySchema = new mongoose.Schema<Category>({
   icon: {
     type: String,
     required: true,
-    default: "ti-package",
+    default: 'ti-package',
   },
   color: {
     type: String,
     required: true,
-    default: "#000000",
+    default: '#000000',
   },
-},{ versionKey: false, timestamps: true });
+},{ versionKey: false, timestamps: true })

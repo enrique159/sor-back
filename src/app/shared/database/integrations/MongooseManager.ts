@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
-import { IDBConnectionManager } from '../interfaces/IDBConnectionManager.js'
-import { MongooseConnectionStatus } from '../interfaces/MongooseStatus.js'
+import { IDBConnectionManager } from '../interfaces/IDBConnectionManager'
+import { MongooseConnectionStatus } from '../interfaces/MongooseStatus'
 
 const BASE_URI = 'mongodb://localhost:27017/sor'
 

@@ -4,6 +4,7 @@ module.exports = {
     'node': true,
   },
   'extends': [
+    'airbnb',
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
   ],
@@ -35,6 +36,16 @@ module.exports = {
       exports: 'never',
       functions: 'never',
     }],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        'js': 'never',
+        'jsx': 'never',
+        'ts': 'never',
+        'tsx': 'never',
+      },
+    ],
   },
   'globals': {
     window: 'readonly',

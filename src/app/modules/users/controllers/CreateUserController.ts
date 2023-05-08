@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
-import { logger } from '../../../shared/log/logger.js'
-import { User } from '../domain/interfaces/Users.js'
-import CreateUserUseCase from '../useCases/CreateUser.useCase.js'
+import { logger } from '../../../shared/log/logger'
+import { User } from '../domain/interfaces/Users'
+import CreateUserUseCase from '../useCases/CreateUser.useCase'
 
 export default class CreateUserController {
   async execute(req: Request, res: Response) {

@@ -1,4 +1,4 @@
-import { User } from '@app/modules/users/domain/interfaces/Users.js'
+import { User } from '@app/modules/users/domain/interfaces/Users'
 
 export interface QueryParams {
   email: string;

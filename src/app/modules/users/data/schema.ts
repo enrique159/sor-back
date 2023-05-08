@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
-import { encryptPassword } from '@/utils/encryptPassword.js'
-import { User } from '../domain/interfaces/Users.js'
+import { encryptPassword } from '@/utils/encryptPassword'
+import { User } from '../domain/interfaces/Users'
 
 export const UserSchema = new mongoose.Schema<User>({
   name: {

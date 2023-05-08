@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { logger } from '../../shared/log/logger.js'
+import { logger } from '../../shared/log/logger'
 
 export default class SignOutController {
   async execute(req: Request, res: Response) {

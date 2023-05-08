@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
-import { logger } from '../../shared/log/logger.js'
-import { Auth } from '../domain/interfaces/Auth.js'
-import SignInUseCase from '../useCases/SignIn.useCase.js'
+import { logger } from '../../shared/log/logger'
+import { Auth } from '../domain/interfaces/Auth'
+import SignInUseCase from '../useCases/SignIn.useCase'
 
 export default class SignInController {
   async execute(req: Request, res: Response) {

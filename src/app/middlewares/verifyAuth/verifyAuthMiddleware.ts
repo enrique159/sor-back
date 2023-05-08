@@ -1,9 +1,9 @@
 import { NextFunction, Request, Response } from 'express'
-import HttpStatusCode from '../../shared/enums/httpStatusCode.js'
-import { logger } from '../../shared/log/logger.js'
+import HttpStatusCode from '../../shared/enums/httpStatusCode'
+import { logger } from '../../shared/log/logger'
 import jwt from 'jsonwebtoken'
-import { decodeToken } from '@/plugins/jwt/decodeToken.js'
-import ErrorCode from '../../shared/error/errorCode.js'
+import { decodeToken } from '@/plugins/jwt/decodeToken'
+import ErrorCode from '../../shared/error/errorCode'
 
 export default class VerifyAuthMiddleware {
   async execute(req: Request, res: Response, next: NextFunction) {

@@ -1,12 +1,12 @@
-import { CreateOneBaseRepository } from '@shared/common/repository/index.js'
-import HttpStatusCode from '@shared/enums/httpStatusCode.js'
-import Exception from '@shared/error/Exception.js'
-import { UserModel } from '../data/model.js'
-import { User } from '../domain/interfaces/Users.js'
-import { CreateUserRepositoryModel } from '../domain/services/CreateUserRepositoryModel.js'
-import ErrorCode from '@shared/error/errorCode.js'
-import MongoDBErrorCodes from '@shared/enums/MongoDBErrorCodes.js'
-import Warning from '@shared/error/Warning.js'
+import { CreateOneBaseRepository } from '@shared/common/repository/index'
+import HttpStatusCode from '@shared/enums/httpStatusCode'
+import Exception from '@shared/error/Exception'
+import { UserModel } from '../data/model'
+import { User } from '../domain/interfaces/Users'
+import { CreateUserRepositoryModel } from '../domain/services/CreateUserRepositoryModel'
+import ErrorCode from '@shared/error/errorCode'
+import MongoDBErrorCodes from '@shared/enums/MongoDBErrorCodes'
+import Warning from '@shared/error/Warning'
 
 export class CreateUserRepository extends CreateOneBaseRepository<User> implements CreateUserRepositoryModel{
   async execute(item: Partial<User>): Promise<User> {

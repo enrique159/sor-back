@@ -1,4 +1,4 @@
-import { Category } from "../interfaces/Categories.js";
+import { Category } from '../interfaces/Categories'
 
 export interface CreateCategoryRepositoryModel {
   execute(payload: Category): Promise<Category>;

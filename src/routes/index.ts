@@ -1,8 +1,8 @@
 import express from 'express'
 
-import { UserRoutes } from '../app/modules/users/routes.js'
-import { CategoriesRoutes } from '../app/modules/categories/routes.js'
-import { AuthRoutes } from '../app/auth/router.js'
+import { UserRoutes } from '../app/modules/users/routes'
+import { CategoriesRoutes } from '../app/modules/categories/routes'
+import { AuthRoutes } from '../app/auth/router'
 
 export const Routes = () => {
   const router = express.Router()
