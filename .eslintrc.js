@@ -20,7 +20,7 @@ module.exports = {
   'rules': {
     'indent': [ 'error', 2 ],
     'eqeqeq': ['error', 'smart'],
-    'linebreak-style': [ 'error', 'unix' ],
+    // 'linebreak-style': [ 'error', 'unix' ],
     'quotes': ['warn', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
     'semi': [ 'error', 'never' ],
     'no-console': 'off',
