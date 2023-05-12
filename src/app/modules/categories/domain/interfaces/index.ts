@@ -1,3 +1,3 @@
-import { Categories, Category } from './Categories'
+import { Categories, Category, CategoryWithProducts } from './Categories'
 
-export type { Categories, Category }
+export type { Categories, Category, CategoryWithProducts }
