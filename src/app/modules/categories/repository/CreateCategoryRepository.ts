@@ -12,8 +12,10 @@ export class CreateCategoryRepository extends CreateOneBaseRepository<Category> 
   async execute(item: Category): Promise<Category> {
     const model = CategoryModel()
     try {
+      console.log(item)
       return await super.execute(item, model)
     } catch (error) {
+      console.log(error)
       // Check MongoDB Error Code
       if (error.code === MongoDBErrorCodes.DUPLICATE_KEY)
         throw new Warning(HttpStatusCode.CONFLICT, ErrorCode.ERR0007)

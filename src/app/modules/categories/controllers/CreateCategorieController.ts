@@ -7,14 +7,16 @@ import { decodeToken } from '@/plugins/jwt/decodeToken'
 
 export default class CreateCategorieController {
   async execute(req: Request, res: Response) {
+    const token = req.headers['authorization']
+    const decodedToken = decodeToken(token)
+
     const category: Category = {
       name: req.body.name,
       description: req.body.description,
-      icon: req.body.icon || 'ti-package',
-      color: req.body.color || '#000000',
+      icon: req.body.icon,
+      color: req.body.color,
+      userId: decodedToken._id,
     }
-    const token = req.headers['authorization']
-    const decodedToken = decodeToken(token)
 
     const createCategoryUseCase = new CreateCategoryUseCase()
     await createCategoryUseCase.execute(category)

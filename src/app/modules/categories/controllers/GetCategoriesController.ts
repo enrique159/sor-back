@@ -11,7 +11,7 @@ export default class GetCategoriesController {
     const decodedToken = decodeToken(token)
 
     const getCategoriesUseCase = new GetCategoriesUseCase()
-    await getCategoriesUseCase.execute()
+    await getCategoriesUseCase.execute(decodedToken._id)
       .then((categories) => {
         logger({ HttpType: 'GET', route: '/categories/', useremail: decodedToken.email, success: true })
         res.status(201).json(categories)

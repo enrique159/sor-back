@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import { Category } from '../domain/interfaces/index'
+import { Category } from '../domain/interfaces'
 
 export const CategorySchema = new mongoose.Schema<Category>({
   name: {
@@ -8,16 +8,18 @@ export const CategorySchema = new mongoose.Schema<Category>({
   },
   description: {
     type: String,
-    required: false,
   },
   icon: {
     type: String,
-    required: true,
-    default: 'ti-package',
+    default: 'fa-pan-food',
   },
   color: {
     type: String,
+    default: '#C3E9DE',
+  },
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'users',
     required: true,
-    default: '#000000',
   },
 },{ versionKey: false, timestamps: true })
