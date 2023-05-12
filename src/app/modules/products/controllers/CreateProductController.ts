@@ -7,14 +7,16 @@ import { decodeToken } from '@/plugins/jwt/decodeToken'
 
 export default class CreateProductController {
   async execute(req: Request, res: Response) {
+    const token = req.headers['authorization']
+    const decodedToken = decodeToken(token)
+
     const product: Product = {
       name: req.body.name,
       description: req.body.description,
       price: req.body.price,
       categoryId: req.body.categoryId,
+      userId: decodedToken._id,
     }
-    const token = req.headers['authorization']
-    const decodedToken = decodeToken(token)
 
     const createProductUseCase = new CreateProductUseCase()
     await createProductUseCase.execute(product)

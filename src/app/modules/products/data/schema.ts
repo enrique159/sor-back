@@ -18,4 +18,9 @@ export const ProductSchema = new mongoose.Schema<Product>({
     type: String,
     required: true,
   },
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'users',
+    required: true,
+  },
 },{ versionKey: false, timestamps: true })

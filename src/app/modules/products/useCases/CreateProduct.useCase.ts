@@ -8,7 +8,7 @@ export default class CreateProductUseCase implements BaseUseCase<Product, Promis
   async execute(payload: Product): Promise<Product> {
     const dbConnectionManager = DBConnectionManager.getInstance()
     const createCategoryRepository = new CreateProductRepository(dbConnectionManager)
-    const category = await createCategoryRepository.execute(payload)
-    return category
+    const product = await createCategoryRepository.execute(payload)
+    return product
   }
 }
