@@ -27,6 +27,7 @@ module.exports = {
     'no-debugger': 'warn',
     'no-var': 'error',
     'no-trailing-spaces': 'error',
+    'no-useless-catch': 'off',
     'space-before-function-paren': ['error', 'never'],
     'comma-dangle': ['error', {
       objects: 'always-multiline',

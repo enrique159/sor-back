@@ -18,16 +18,16 @@ export default class DBConnectionManager implements IDBConnectionManager {
   public async connect(): Promise<void> {
     // MONGO DB
     if (process.env.DATABASE_TYPE === DatabaseTypes.MONGO) {
-      console.log('Database Type: ' + DatabaseTypes.MONGO)
-      console.log('Connection to Database: CONNECTING')
+      console.log('[server⚡️]: Database Type: ' + DatabaseTypes.MONGO)
+      console.log('[server⚡️]: Connection to Database: CONNECTING')
       // Get the instance of the class
       const mongooseManager = MongooseManager.getInstance(process.env.MONGODB_URI)
       await mongooseManager.connect()
         .then(() => {
-          console.log('Connection to Database: SUCCESS')
+          console.log('[server⚡️]: Connection to Database: SUCCESS')
         })
         .catch((error) => {
-          console.log('Connection to Database: ERROR')
+          console.log('[server⚡️]: Connection to Database: ERROR')
           console.log(error)
         })
     }

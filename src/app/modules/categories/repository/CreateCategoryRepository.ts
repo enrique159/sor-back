@@ -1,5 +1,5 @@
 import { ErrorHandler } from '@app/shared/error/ErrorHandler'
-import { CreateOneBaseRepository } from '@shared/common/repository/index'
+import { CreateOneBaseRepository } from '@shared/common/repository'
 import { CategoryModel } from '../data/model'
 import { Category } from '../domain/interfaces/Categories'
 import { CreateCategoryRepositoryModel } from '../domain/services/CreateCategoryRepositoryModel'
