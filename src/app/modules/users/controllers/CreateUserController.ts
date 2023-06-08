@@ -16,7 +16,7 @@ export default class CreateUserController {
     await createUserUseCase.execute(user)
       .then((user) => {
         logger({ HttpType: 'POST', route: '/users/create', useremail: user.email, success: true })
-        res.status(201).json(user)
+        res.status(201).json({ data: user })
       })
       .catch((err) => {
         logger({ HttpType: 'POST', route: '/users/create', useremail: user.email, error: err.errors[0].description, success: false })

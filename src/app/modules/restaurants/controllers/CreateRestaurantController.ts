@@ -18,7 +18,7 @@ export default class CreateRestaurantController {
     await useCase.execute(payload)
       .then((response) => {
         logger({ HttpType: 'POST', route: '/restaurants/create', useremail: decodedToken.email, success: true })
-        res.status(200).json(response)
+        res.status(201).json({ data: response })
       })
       .catch((err) => {
         logger({ HttpType: 'POST', route: '/restaurants/create', useremail: decodedToken.email, success: false, error: err[0].description })

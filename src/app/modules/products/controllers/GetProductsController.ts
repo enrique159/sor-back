@@ -14,7 +14,7 @@ export default class GetProductsController {
     await getProductsUseCase.execute(decodedToken._id)
       .then((products) => {
         logger({ HttpType: 'GET', route: '/products/', useremail: decodedToken.email, success: true })
-        res.status(201).json(products)
+        res.status(201).json({ data: products })
       })
       .catch((err) => {
         logger({ HttpType: 'GET', route: '/products/', useremail:  decodedToken.email, error: err.errors[0].description, success: false })

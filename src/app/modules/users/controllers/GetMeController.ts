@@ -12,7 +12,7 @@ export default class GetMeController {
     await useCase.execute({ _id: decodedToken._id })
       .then((response) => {
         logger({ HttpType: 'GET', route: '/users/me', useremail: decodedToken.email, success: true })
-        res.status(200).json(response)
+        res.status(200).json({ data: response })
       })
       .catch((err) => {
         logger({ HttpType: 'GET', route: '/users/me', useremail: decodedToken.email, success: false, error: err.errors[0].description })

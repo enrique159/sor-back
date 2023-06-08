@@ -22,7 +22,7 @@ export default class CreateProductController {
     await createProductUseCase.execute(product)
       .then((product) => {
         logger({ HttpType: 'POST', route: '/products/create', useremail: decodedToken.email, success: true })
-        res.status(201).json(product)
+        res.status(201).json({ data: product })
       })
       .catch((err) => {
         logger({ HttpType: 'POST', route: '/products/create', useremail:  decodedToken.email, error: err.errors[0].description, success: false })

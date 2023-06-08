@@ -11,7 +11,7 @@ export default class GetProductsByCategoryController {
     await getProductsByCategoryUseCase.execute({ userId: decodedToken._id, categoryId: req.body.categoryId })
       .then((products) => {
         logger({ HttpType: 'GET', route: '/products/by-category', useremail: decodedToken.email, success: true })
-        res.status(201).json(products)
+        res.status(201).json({ data: products })
       }).catch((err) => {
         logger({ HttpType: 'GET', route: '/products/by-category', useremail: decodedToken.email, error: err.errors[0].description, success: false })
         res.status(err.statusCode).json({ error: err.errors })

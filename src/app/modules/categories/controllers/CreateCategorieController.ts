@@ -22,7 +22,7 @@ export default class CreateCategorieController {
     await createCategoryUseCase.execute(category)
       .then((category) => {
         logger({ HttpType: 'POST', route: '/categories/create', useremail: decodedToken.email, success: true })
-        res.status(201).json(category)
+        res.status(201).json({ data: category })
       })
       .catch((err) => {
         logger({ HttpType: 'POST', route: '/categories/create', useremail:  decodedToken.email, error: err.errors[0].description, success: false })
