@@ -7,6 +7,7 @@ import { SignInRepository } from '../repository/SignInRepository'
 import { generateToken } from '@/plugins/jwt/generateToken'
 import ErrorCode from '@shared/error/errorCode'
 import HttpStatusCode from '@shared/enums/httpStatusCode'
+import { User } from '@/app/modules/users/domain/interfaces'
 
 export default class SignInUseCase implements BaseUseCase<Auth, Promise<AuthResponse>> {
   async execute(payload: Auth): Promise<AuthResponse> {
@@ -40,7 +41,7 @@ export default class SignInUseCase implements BaseUseCase<Auth, Promise<AuthResp
       role: user.role,
     }
 
-    const token = generateToken(userAuth)
+    const token = generateToken<UserAuth>(userAuth, true)
     const authResponse: AuthResponse = {
       token: token,
       user: userAuth,

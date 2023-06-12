@@ -29,6 +29,7 @@ module.exports = {
     'no-trailing-spaces': 'error',
     'no-useless-catch': 'off',
     'space-before-function-paren': ['error', 'never'],
+    '@typescript-eslint/ban-ts-comment': 'off',
     'comma-dangle': ['error', {
       objects: 'always-multiline',
       arrays: 'always-multiline',

@@ -6,7 +6,6 @@ export const RestaurantSchema = new mongoose.Schema<Restaurant>({
   description: { type: String },
   address: { type: Object, required: true },
   logo: { type: String },
-  mainRestaurant: { type: Boolean, default: false },
   deliveryMode: { type: Boolean, default: false },
   takeAwayMode: { type: Boolean, default: false },
   dineInMode: { type: Boolean, default: false },

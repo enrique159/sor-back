@@ -1,15 +1,15 @@
 import jwt from 'jsonwebtoken'
-import { UserAuth } from '@app/auth/domain/interfaces/Auth'
 
-export const generateToken = (user: UserAuth) => {
-  const payload = {
-    _id: user._id,
-    name: user.name,
-    email: user.email,
-    role: user.role,
-  }
+export type TokenOptions = {
+  expiresIn?: string | number
+}
+
+export const generateToken = <T>(payload: T, expires: boolean) => {
   const secret = process.env.SECRET_KEY || 'secret'
-  const options = {
+  if (!expires) return jwt.sign(payload, secret)
+
+  // With expiration time
+  const options: TokenOptions = {
     expiresIn: process.env.EXPIRATION_TIME || '24h',
   }
   return jwt.sign(payload, secret, options)

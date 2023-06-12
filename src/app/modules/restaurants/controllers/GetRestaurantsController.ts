@@ -13,7 +13,7 @@ export default class GetRestaurantsController {
     await getRestaurantsUseCase.execute(decodedToken._id)
       .then((restaurants) => {
         logger({ HttpType: 'GET', route: '/restaurants/', useremail: decodedToken.email, success: true })
-        res.status(201).json({ data: restaurants })
+        res.status(200).json({ data: restaurants })
       })
       .catch((err) => {
         logger({ HttpType: 'GET', route: '/restaurants/', useremail:  decodedToken.email, error: err.errors[0].description, success: false })

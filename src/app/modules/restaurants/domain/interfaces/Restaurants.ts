@@ -14,7 +14,6 @@ export interface Restaurant {
   description?: string
   address: IAddress
   logo?: string
-  mainRestaurant: boolean
   // Options for attending the restaurant
   deliveryMode: boolean
   takeAwayMode: boolean

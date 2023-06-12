@@ -4,6 +4,7 @@ import { UserRoutes } from '../app/modules/users/routes'
 import { CategoriesRoutes } from '../app/modules/categories/routes'
 import { ProductsRoutes } from '../app/modules/products/routes'
 import { RestaurantsRoutes } from '@/app/modules/restaurants/routes'
+import { RpvRoutes } from '@/app/modules/rpv/routes'
 import { AuthRoutes } from '../app/auth/router'
 
 export const Routes = () => {
@@ -12,6 +13,7 @@ export const Routes = () => {
   router.use('/categories', CategoriesRoutes())
   router.use('/products', ProductsRoutes())
   router.use('/restaurants', RestaurantsRoutes())
+  router.use('/rpv', RpvRoutes())
   router.use('/auth', AuthRoutes())
   return router
 }
